@@ -1,0 +1,6 @@
+Terminal = add branch name
+https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt
+
+Git tutorial
+https://www.youtube.com/watch?v=8JJ101D3knE
+https://www.youtube.com/watch?v=RGOj5yH7evk
