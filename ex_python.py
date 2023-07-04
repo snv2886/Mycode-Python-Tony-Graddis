@@ -660,21 +660,21 @@
 # if __name__ == '__main__':
 #     main()
 
-def main():
-    golf_file = open('golf.txt', 'w')
-    answer = 'y'
-
-    while answer == 'y':
-        name = input("Enter your name: ")
-        score = int(input("Enter the score: "))
-        golf_file.write(f'{name}\n')
-        golf_file.write(f'{score}\n')
-        answer = input("Do you want to enter new name y/n? ")
-
-    golf_file.close()
-
-
-if __name__ == '__main__':
-    main()
-
-    272
+# def main():
+#     golf_file = open('golf.txt', 'w')
+#     answer = 'y'
+#
+#     while answer == 'y':
+#         name = input("Enter your name: ")
+#         score = int(input("Enter the score: "))
+#         golf_file.write(f'{name}\n')
+#         golf_file.write(f'{score}\n')
+#         answer = input("Do you want to enter new name y/n? ")
+#
+#     golf_file.close()
+#
+#
+# if __name__ == '__main__':
+#     main()
+#
+#     272
