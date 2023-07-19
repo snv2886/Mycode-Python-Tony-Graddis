@@ -486,7 +486,383 @@
 # print(list1)
 # print(list2)
 
-list1 = [1, 12, 2, 20, 3, 15, 4]
-list2 = [item*2 for item in list1]
-print(list1)
-print(list2)
+# list1 = [1, 12, 2, 20, 3, 15, 4]
+# list2 = [item*2 for item in list1]
+# print(list1)
+# print(list2)
+
+# def main():
+#     # Создать двумерный список.
+#     values = [[1, 2, 3],
+#               [10, 20, 30],
+#               [100, 200, 300]]
+#     # Вывести на экран элементы списка.
+#     for row in values:
+#         for element in row:
+#             print(element)
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# import random
+# ROW = 2
+# COL = 4
+#
+#
+# def main():
+#     # Создать двумерный список.
+#     values = [[0, 0, 0, 0],
+#               [0, 0, 0, 0]]
+#     # Fill in two-demensional list with random numbers.
+#     for r in range(ROW):
+#         for c in range(COL):
+#             values[r][c] = 0
+#     print(values)
+#
+#
+# if __name__ == '__main__':
+#     main()
+# my_tuple = (1, 2, 3, 4, 5)
+# print(my_tuple)
+# names = ('Tom', 'John', 'Chloe')
+# for n in names:
+#     print(n)
+
+# names = ('Tom', 'John', 'Chloe')
+# for n in range(len(names)):
+#     print(names[n])
+# number_tuple = (1, 2, 3)
+# number_list = list(number_tuple)
+# print(number_list)
+#
+# str_list = ['Tom', 'Mike', 'Chloe']
+# str_tuple = tuple(str_list)
+# print(str_tuple)
+
+# import matplotlib.pyplot as plt
+#
+#
+# def main():
+#     x_coordinat = [0, 1, 2, 3, 4]
+#     y_coordinat = [0, 3, 1, 5, 2]
+#     # Вызывается функция 'plot'
+#     # Функция 'plot' создала лин. граф. в оперативной памяти.
+#     plt.plot(x_coordinat, y_coordinat, 's')
+#
+#     # Add title
+#     plt.title('Образец данных')
+#
+#     # Добавить на оси описательные метки.
+#     plt.xlabel('Год')
+#     plt.ylabel('Объем продаж')
+#
+#     # Настроить метки данных
+#     plt.xticks([0, 1, 2, 3, 4], ['2016', '2017', '2018', '2019', '2020'])
+#     plt.yticks([0, 1, 2, 3, 4, 5], ['$0m', '$1m', '$2m', '$3m', '$4m', '$5m'])
+#
+#     # Add grid
+#     plt.grid(True)
+#
+#     # Вывести график на экран show()
+#     plt.show()
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# import matplotlib.pyplot as plt
+#
+#
+# def main():
+#     # Создать список с координатами X левого края каждого столбика
+#     left_edge = [0, 10, 20, 30, 40]
+#     # Создать список с высотами каждого столбика
+#     height = [100, 200, 300, 400, 500]
+#
+#     # bar width
+#     bar_width = 5
+#
+#     # Построить гистограмму.
+#     plt.bar(left_edge, height, bar_width,
+#             color=('r', 'g', 'b', 'm', 'k'))
+#
+#     # Show bar chart
+#     plt.show()
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# import matplotlib.pyplot as plt
+#
+#
+# def main():
+#     # Координаты x, y
+#     left_edge = [0, 10, 20, 30, 40]
+#     height = [100, 200, 300, 400, 200]
+#
+#     # bar width
+#     bar_width = 8
+#
+#     # create bar chat in memory
+#     plt.bar(left_edge, height, bar_width,
+#             color=('k', 'b', 'm', 'y', 'c'))
+#
+#     # title
+#     plt.title('Продажи с разбивкой по годам')
+#
+#     # Подпиписать ось x , y
+#     plt.xlabel('Год')
+#     plt.ylabel('Объем продаж')
+#
+#     # Деления на оси x , y
+#     plt.xticks([0, 10, 20, 30, 40],  # смещение тикета[5, 15, 25, 35, 45]
+#                ['2016', '2017', '2018', '2019', '2020'])
+#     plt.yticks([0, 100, 200, 300, 400, 500],  # деления на оси y
+#                ['$0m', '$1m', '$2m', '$3m', '$4m', '$5m'])
+#
+#     # Show bar
+#     plt.show()
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# import matplotlib.pyplot as plt
+#
+#
+# def main():
+#     sales = [100, 400, 300, 600]
+#
+#     # Создать список меток
+#     sales_labels = ['1 quater', '2 quater', '3 quater', '4 quater']
+#
+#     # Creat pie chart
+#     plt.pie(sales, labels=sales_labels)
+#
+#     # Add title
+#     plt.title('Sales by quater')
+#
+#     # Show pie chart
+#     plt.show()
+#
+#
+# if __name__ == '__main__':
+#     main()
+# my_list = [1, 2, 3, 4, 5, 6, 7, 8]
+# print(my_list[-4:])
+# value = [2] * 5
+# print(value)
+# names = ['Энштейн', 'Ньютон', 'Коперник', 'Кеплер']
+# for name in names:
+#     print(name)
+
+# def main():
+#     my_list = [1, 2, 3, 4, 5, 6, 7, 8]
+#     print(my_function(my_list))
+#
+#
+# def my_function(my_list2):
+#     total = 0
+#     for num in my_list2:
+#         total += num
+#     return total
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# names = ['Энштейн', 'Ньютон', 'Коперник', 'Кеплер', 'Ruby']
+# if 'Ruby' in names:
+#     print("We found Ruby")
+# else:
+#     print("We didn't find Ruby")
+
+# list1 = [3, 2, 4, 120, 84, 220, 500, 25]
+# list2 = [item for item in list1 if (item % 2) == 0]
+# print(list2)
+
+# ROWS = 5
+# COL = 3
+#
+# list1 = [[0, 0, 0],
+#          [0, 0, 0],
+#          [0, 0, 0],
+#          [0, 0, 0],
+#          [0, 0, 0]]
+#
+# for r in range(ROWS):
+#     for c in range(COL):
+#         list1[r][c] = int(input("Enter the number: "))
+# print(list1)
+
+# ex.7.1
+# def main():
+#     # создать пустой список
+#     sales_week = []
+#     total = 0
+#     # список дней недели
+#     week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday',
+#             'Friday', 'Saturday', 'Sunday']
+#
+#     # продажи за день
+#     for index in range(len(week)):
+#         sales_per_day = int(input(f'Enter sales for {week[index]}: '))
+#         sales_week.append(sales_per_day)
+#
+#     for num in sales_week:
+#         total += num
+#     print(f'The total amoun for week is: {total}')
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# ex.7.2
+# import random
+#
+#
+# def main():
+#     RANDOM_NUMBERS = 7
+#     random_list = []
+#
+#     for count in range(RANDOM_NUMBERS):
+#         rand_num = random.randint(0, 9)
+#         random_list.append(rand_num)
+#
+#     for num in random_list:
+#         print(num)
+#
+#     print(random_list)
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# ex.7.3
+# def main():
+#     month_list = ['January', 'February', 'March', 'April',
+#                   'May', 'June', 'July', 'August', 'September',
+#                   'October', 'November', 'December']
+#     rain_list = []
+#
+#     for index in range(len(month_list)):
+#         rain_quantity = float(
+#                 input(f'Enter raninfall amount for {month_list[index]}: '))
+#
+#         rain_list.append(rain_quantity)
+#     avr_rain = grand_total(rain_list) / len(month_list)
+#     max_rain = max(rain_list)
+#     min_rain = min(rain_list)
+#
+#     print(f'The Total rainfall is: {grand_total(rain_list)}')
+#     print(f'The average rainfall is: {avr_rain}')
+#     print(f'The maximum rainfall is: {max_rain}')
+#     print(f'The minimum rainfall is: {min_rain}')
+#
+#
+# def grand_total(list_a):
+#     total = 0
+#     for num in list_a:
+#         total += num
+#     return total
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# ex.7.4
+# def main():
+#     NUMBERS_QTY = 20
+#     numbers_list = []
+#
+#     for count in range(NUMBERS_QTY):
+#         your_num = float(input(f'Enter the number №{count + 1}: '))
+#         numbers_list.append(your_num)
+#
+#     min_num = min(numbers_list)
+#     max_num = max(numbers_list)
+#     total_num = grand_total(numbers_list)
+#     average_num = grand_total(numbers_list) / NUMBERS_QTY
+#
+#     print(f'Minimum number is {min_num}')
+#     print(f'Maximum number is {max_num}')
+#     print(f'Total amount is {total_num}')
+#     print(f'Average amount is {average_num}')
+#
+#
+# def grand_total(my_list):
+#     total = 0
+#     for num in my_list:
+#         total += num
+#     return total
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# ex 7.5
+# def main():
+#     my_file = open('charge_accounts.txt', 'r')
+#     your_account = int(input("Enter 7 digits number of the account: "))
+#
+#     # create a list from data from the file
+#     my_list = my_file.readlines()
+#     print(my_list)
+#     # close the file
+#     my_file.close()
+#
+#     # remove '\n' from the list
+#     for index in range(len(my_list)):
+#         my_list[index] = my_list[index].rstrip('\n')
+#     print(my_list)
+#
+#     # convert strings to numbers
+#     for index in range(len(my_list)):
+#         my_list[index] = int(my_list[index])
+#     print(my_list)
+#
+#     # searching your number from the list
+#     if your_account in my_list:
+#         print('The number is available.')
+#     else:
+#         print('The number is not available.')
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# ex 7.6
+import random
+
+
+def main():
+    LIST_NUMBERS = 30
+    n = int(input("Enter any number: "))
+
+    # print new list
+    for num in my_function(random_list(LIST_NUMBERS), n):
+        print(num)
+
+
+# create a list with random elements
+def random_list(numbers_a):
+    list3 = []
+    for index in range(numbers_a):
+        list3.append(random.randint(1, 500))
+    print(list3)
+    return list3
+
+
+# list1 = [1, 3, 5, 6, 3, 33, 56, 40, 55, 768, 34, 124]
+
+# create a list with elements > n
+def my_function(my_list, n):
+    list2 = [item for item in my_list if item > n]
+    return list2
+
+
+if __name__ == '__main__':
+    main()
