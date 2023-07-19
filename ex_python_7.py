@@ -835,34 +835,129 @@
 #     main()
 
 # ex 7.6
-import random
+# import random
+#
+#
+# def main():
+#     LIST_NUMBERS = 30
+#     n = int(input("Enter any number: "))
+#
+#     # print new list
+#     for num in my_function(random_list(LIST_NUMBERS), n):
+#         print(num)
+#
+#
+# # create a list with random elements
+# def random_list(numbers_a):
+#     list3 = []
+#     for index in range(numbers_a):
+#         list3.append(random.randint(1, 500))
+#     print(list3)
+#     return list3
+#
+#
+# # list1 = [1, 3, 5, 6, 3, 33, 56, 40, 55, 768, 34, 124]
+#
+# # create a list with elements > n
+# def my_function(my_list, n):
+#     list2 = [item for item in my_list if item > n]
+#     return list2
+#
+#
+# if __name__ == '__main__':
+#     main()
 
+# ex 7.7
+# def main():
+#     # create tuple
+#     right_answers_list = ('A', 'C', 'A', 'A', 'D', 'B', 'C', 'A', 'C', 'B',
+#                           'A', 'D', 'C', 'A', 'D', 'C', 'B', 'B', 'D', 'A')
+#     # create a file
+#     # student_solution_f(QUESTIONS)
+#     # print(right_answers_list)
+#
+#     student_answers_list = solution_f()
+#     # print(student_answers_list)
+#     student_check_list = final_list_f(right_answers_list, student_answers_list)
+#     # print(student_check_list)
+#     right_answers = right_answers_f(student_check_list)
+#     print(f'Right answers: {right_answers}')
+#     wrong_answers = len(student_check_list) - right_answers
+#     print(f'Wrong answers: {wrong_answers}')
+#
+#     for index in range(len(student_check_list)):
+#         if student_check_list[index] != 0:
+#             True
+#         else:
+#             print(f'Question № {index + 1} - wrong answer.')
+#
+#
+# def right_answers_f(check_list):
+#     total = 0
+#     for num in check_list:
+#         total += num
+#     return total
+#
+#
+# # function that creates check list
+# def final_list_f(right_answers_list, student_answers_list):
+#     # check the number of element in your lists
+#     if len(right_answers_list) == len(student_answers_list):
+#         True
+#     else:
+#         print('Check the number of elements in your lists!')
+#
+#     final_list = []
+#     for index in range(len(right_answers_list)):
+#         if right_answers_list[index] == student_answers_list[index]:
+#             final_list.append(1)
+#         else:
+#             final_list.append(0)
+#     return final_list
+#
+#
+# # Function that opens file and download the list
+# def solution_f():
+#     student_file = open('student_solution.txt', 'r')
+#     student_answers = []
+#     # remove '\n' from the list
+#     for answer in student_file:
+#         answer = answer[:-1]
+#         student_answers.append(answer)
+#     student_file.close()
+#     print(student_answers)
+#     return student_answers
+#
+#     # # opent student_solution.txt with the list
+#     # student_file = open('student_solution.txt', 'r')
+#     # student_list = student_file.readlines()
+#     # student_file.close()
+#
+#     # # remove '\n' from the list
+#     # for index in range(len(student_list)):
+#     #     student_list[index] = student_list[index].rstrip('\n')
+#     # return student_list
+#
+#
+# # Function that makes file with student's answers
+# def student_solution_f(QUESTIONS):
+#     # number of question in the test
+#     QUESTIONS = 20
+#
+#     student_solution_file = open('student_solution.txt', 'w')
+#     student_solution_list = []
+#     for index in range(QUESTIONS):
+#         student_solution = str(input(f'Enter student solution '
+#                                      f'for the question number {index + 1}: '))
+#         student_solution_list.append(student_solution)
+#     for value in student_solution_list:
+#         student_solution_file.write(value + '\n')
+#     student_solution_file.close()
+#
+#
+# if __name__ == '__main__':
+#     main()
 
-def main():
-    LIST_NUMBERS = 30
-    n = int(input("Enter any number: "))
-
-    # print new list
-    for num in my_function(random_list(LIST_NUMBERS), n):
-        print(num)
-
-
-# create a list with random elements
-def random_list(numbers_a):
-    list3 = []
-    for index in range(numbers_a):
-        list3.append(random.randint(1, 500))
-    print(list3)
-    return list3
-
-
-# list1 = [1, 3, 5, 6, 3, 33, 56, 40, 55, 768, 34, 124]
-
-# create a list with elements > n
-def my_function(my_list, n):
-    list2 = [item for item in my_list if item > n]
-    return list2
-
-
-if __name__ == '__main__':
-    main()
+cities = open('cities.txt', 'r')
+for value in cities:
+    print(value[2])
