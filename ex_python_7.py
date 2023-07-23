@@ -958,6 +958,6 @@
 # if __name__ == '__main__':
 #     main()
 
-cities = open('cities.txt', 'r')
-for value in cities:
-    print(value[2])
+# cities = open('cities.txt', 'r')
+# for value in cities:
+#     print(value[2])
