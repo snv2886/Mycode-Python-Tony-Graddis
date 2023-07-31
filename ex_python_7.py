@@ -961,3 +961,28 @@
 # cities = open('cities.txt', 'r')
 # for value in cities:
 #     print(value[2])
+# def main():
+#     infile = open('WorldSeriesWinner.txt', 'r')
+#     infile_content = infile.readline()
+#     list_teams = []
+#     while infile_content != '':
+#         list_teams.append(infile_content.split())
+#         infile_content = infile.readline()
+#     # print(list_teams)
+#     new_list_team = []
+#
+#     for i in list_teams:
+#         print(i[-1])
+#         new_list_team.append(i[-1])
+#     print(new_list_team)
+#     aTeam = input()
+#     total = new_list_team.count(aTeam)
+#     print(total)
+#     count = 0
+#     for team in new_list_team:
+#         if aTeam == team:
+#             count += 1
+#     print(count)
+#
+#
+# main()

@@ -1,0 +1,12 @@
+rent
+1000
+fuel
+500
+food
+800
+clothes
+300
+car payments
+400
+other
+500

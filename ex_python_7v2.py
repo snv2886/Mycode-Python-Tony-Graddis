@@ -184,7 +184,7 @@
 #     main()
 
 # ex 7.11
-import random
+# import random
 
 
 # def main():
@@ -235,27 +235,113 @@ import random
 #     main()
 
 # ex 7.12
+# def main():
+#     your_number = int(input("Enter any integer number more then 1: "))
+#     my_list = []
+#     for value in range(your_number):
+#         my_list.append(value + 1)
+#     del my_list[0]
+#     prime_comp_numb_f(my_list)
+#
+#
+# def prime_comp_numb_f(my_list):
+#     for index in range(len(my_list)):
+#         count = 0
+#         for value in my_list:
+#             number = my_list[index] % value
+#             if number == 0:
+#                 count += 1
+#         if count > 1:
+#             print(f'{my_list[index]} is Complex value')
+#         else:
+#             print(f'{my_list[index]} is Prime value')
+#
+#
+# if __name__ == '__main__':
+#     main()
+# import random
+#
+#
+# def main():
+#     responses_file = open('8_ball_responses.txt', 'r')
+#     # create a response list
+#     # response_list = responses_file.readlines()
+#     # for index in range(len(response_list)):
+#     #     response_list[index] = response_list[index].rstrip('\n')
+#     responses_list = []
+#     for value in responses_file:
+#         value = value[:-1]
+#         responses_list.append(value)
+#     responses_file.close()
+#     your_question = input("Enter your question: ")
+#     while your_question != 'stop':
+#         answer = random.choice(responses_list)
+#         print(answer)
+#         print()
+#         your_question = input("Enter your question: ")
+#
+#
+# if __name__ == '__main__':
+#     main()
+# import matplotlib.pyplot as plt
+#
+#
+# def main():
+#     my_file = open('my_month_exp.txt', 'r')
+#
+#     # create two list
+#     text_list = []
+#     data_list = []
+#     text = my_file.readline()
+#     while text != '':
+#         text = text.rstrip('\n')
+#         text_list.append(text)
+#         data = my_file.readline()
+#         data = int(data.rstrip('\n'))
+#         data_list.append(data)
+#         text = my_file.readline()
+#
+#     plt.pie(data_list, labels=text_list)
+#     plt.title("Monthly expenses")
+#     plt.show()
+#
+#     print(text_list)
+#     print(data_list)
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+# ex 7.15
+import matplotlib.pyplot as plt
+
+
 def main():
-    your_number = int(input("Enter any integer number more then 1: "))
-    my_list = []
-    for value in range(your_number):
-        my_list.append(value + 1)
-    del my_list[0]
-    prime_comp_numb_f(my_list)
+    gas_file = open('1994_Weekly_ Gas_Averages.txt', 'r')
+    gas_list = []
+    for value in gas_file:
+        value = float(value[:-1])
+        gas_list.append(value)
+    gas_file.close()
+
+    week = 1
+    week_list = []
+    for index in range(len(gas_list)):
+        week_list.append(week)
+        week += 1
+    print(week_list)
+    print(gas_list)
+
+    plt.plot(week_list, gas_list)
+    plt.title("Weekly gasoline prices")
+    plt.xlabel("Weeks")
+    plt.ylabel("Gasoline prices")
+    plt.ylim(ymin=0.95, ymax=1.2)
+    plt.xticks(week_list)
+    plt.yticks(gas_list)
+    plt.grid
+    plt.show()
 
 
-def prime_comp_numb_f(my_list):
-    for index in range(len(my_list)):
-        count = 0
-        for value in my_list:
-            number = my_list[index] % value
-            if number == 0:
-                count += 1
-        if count > 1:
-            print(f'{my_list[index]} is Complex value')
-        else:
-            print(f'{my_list[index]} is Prime value')
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
