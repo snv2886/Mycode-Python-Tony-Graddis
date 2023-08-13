@@ -374,4 +374,120 @@
 #     main()
 
 # ex 8.11
+# def main():
+#     your_text = input("Enter your text: ")
+#     mod_text = ''
+#     for ch in range(len(your_text)):
+#         if ch == 0:
+#             mod_text += your_text[ch]
+#         elif your_text[ch].isupper():
+#             mod_text += ' ' + your_text[ch].lower()
+#         else:
+#             mod_text += your_text[ch]
+#
+#     print(mod_text)
+#
+#
+# if __name__ == '__main__':
+#     main()
 
+# ex 8.12
+# def main():
+#     your_text = input("Enter your text: ")
+#     text_list = your_text.split(' ')
+#     mod_text = ''
+#     for element in text_list:
+#         mod_text += element[1:] + element[0] + 'КИ' + ' '
+#     mod_text = mod_text.rstrip()
+#     print(your_text)
+#     print(mod_text)
+#
+#
+# if __name__ == '__main__':
+#     main()
+#
+# ex 8.13 https://dzen.ru/a/YRBW5D2Qlm7x6c1o?utm_referer=www.google.com
+def main():
+    my_list = []
+    unique_list = []
+    unique_list_pb = []
+    unique_list_v2 = []
+    new_list = []
+    new_list2 = []
+
+    my_file = open('pbnumbers.txt', 'r')
+    new_list2 = my_file.readlines()
+
+    # create a two-demensional list
+    for line in new_list2:
+        my_list.append(line.split())
+        # print(my_list)
+    my_file.close()
+    # cteate list of unique numbers
+    for line in my_list:
+        for ch in line[:-1]:
+            new_list.append(ch)
+            if ch not in unique_list:
+                unique_list.append(ch)
+    
+    # create list of unique pb numbers
+    for line in my_list:
+        for ch in line[-1:]:
+            if ch not in unique_list_pb:
+                unique_list_pb.append(ch)
+
+# count repetitions
+    for ch in range(len(unique_list)):
+        unique_list_v2.append(new_list.count(unique_list[ch]))
+    # print(f'unique_list_v2 {unique_list_v2}')
+    # print(f'unique_list {unique_list}')
+    
+# maximum
+    for i in range(10):
+        maximum = unique_list_v2.index(max(unique_list_v2))
+        print(f'number {unique_list[maximum]} has max repeats '
+              f'{unique_list_v2[maximum]}')
+        del unique_list[maximum]
+        del unique_list_v2[maximum]
+
+
+if __name__ == '__main__':
+    main()
+
+# def main():
+#     my_file = open('pbnumbers.txt', 'r')
+#     analysis(my_file)
+#     
+# 
+# # Создать двумерный список
+# def analysis(file):
+#     file = file.readlines()
+#     PowerBallNumber = []
+#     for line in range(len(file)):
+#         file[line] = file[line].rstrip('\n')
+#         file[line] = file[line].split()
+#         PowerBallNumber.append(file[line][5])
+#         del file[line][5]
+#     # print(len(file))
+#     # print(PowerBallNumber)
+# 
+# 
+# def count_max(text):
+#     # Преобразование двумерного списка в одномерный
+#     text = sum(text, [])
+#     sumbols = list(set(text))
+#     mas_numbers = []
+#     mas_count = []
+#     for i in range(len(sumbols)):
+#         mas_numbers.append((sumbols[i]))
+#         mas_count.append(int(text.count(sumbols[i])))
+#     # 10 самых часто встречающихся эелементов
+#     for i in range(10):
+#         maximum = mas_count.index(max(mas_count))
+#         print(mas_numbers[maximum], 'встретилось', mas_count[maximum], 'раз')
+#         del mas_count[maximum]
+#         del mas_numbers[maximum]
+# 
+# 
+# if __name__ == '__main__':
+#     main()
