@@ -23,96 +23,127 @@
 # имен и дней рождений друзей
 
 # Глобальные константы для пунктов меню
-LOOK_UP = 1
-ADD = 2
-CHANGE = 3
-DELETE = 4
-QUIT = 5
+# LOOK_UP = 1
+# ADD = 2
+# CHANGE = 3
+# DELETE = 4
+# QUIT = 5
+#
+#
+# # Главная функция
+# def main():
+#     # Создать пустой словарь
+#     birthdays = {}
+#
+#     # Инициализировать переменную для выбора пользователя
+#     choice = 0
+#
+#     while choice != QUIT:
+#         # получить выбранный пользователем пункт меню
+#         choice = get_menu_choice()
+#
+#         # обработать выбранный вариант действий.
+#         if choice == LOOK_UP:
+#             look_up(birthdays)
+#         elif choice == ADD:
+#             add(birthdays)
+#         elif choice == CHANGE:
+#             change(birthdays)
+#         elif choice == DELETE:
+#             delete(birthdays)
+#
+# def get_menu_choice():
+#     print()
+#     print('Друзья и их дни рождения')
+#     print('------------------------')
+#     print('1. Найти день рождения')
+#     print('2. Добавить новый день рождения')
+#     print('3. Изменить день рождения')
+#     print('4. Удалить день рождения')
+#     print('5. Выйти из программы')
+#     print()
+#
+#     # Получить выбранный пользователем пункт
+#     choice = int(input('Введите выбранный пункт: '))
+#
+#     # Проверить выбранный пункт на допустимость
+#     while choice < LOOK_UP or choice > QUIT:
+#         choice = int(input('Введите выбранный пункт: '))
+#
+#     # вернуть выбранный пользователем пункт
+#     return choice
+#
+#
+# def look_up(birthdays):
+#     # получить искомое имя
+#     name = input('Введите имя: ')
+#     # отыскать его в словаре
+#     print(birthdays.get(name, 'Не найдено.'))
+#
+#
+# def add(birthdays):
+#     # Получить имя и день рождения
+#     name = input('Введите имя: ')
+#     bday = input('Введите день рождения: ')
+#
+#     # Если имя не существует, то его добавить
+#     if name not in birthdays:
+#         birthdays[name] = bday
+#     else:
+#         print('Эта запись уже существует.')
+#
+#
+# def change(birthdays):
+#     # Получить искомое имя
+#     name = input('Введите имя: ')
+#
+#     if name in birthdays:
+#         # Получить новый день рождения
+#         bday = input('Введите день рождения: ')
+#         # обновить запись
+#         birthdays[name] = bday
+#     else:
+#         print('Это имя не найдено.')
+#
+#
+# def delete(birthdays):
+#     name = input('Введите имя: ')
+#     if name in birthdays:
+#         del birthdays[name]
+#     else:
+#         print('Это имя не найдено.')
+#
+#
+# if __name__ == '__main__':
+#     main()
 
+# numbers = [1, 2, 3, 4]
+# squares = {item: item**2 for item in numbers}
+# print(squares)
 
-# Главная функция
-def main():
-    # Создать пустой словарь
-    birthdays = {}
+# numbers = [1, 2, 3, 4]
+# square = {}
+# for item in numbers:
+#     square[item] = item**2
+# print(square)
 
-    # Инициализировать переменную для выбора пользователя
-    choice = 0
+# phonebook = {'Kris': '555-111', 'Katy': '555-222', 'Jhoanna': '555-333'}
+# print(phonebook.items())
+# phonebook_copy = {k: v for k, v in phonebook.items()}
+# phonebook_copy2 = {k: v for (k, v) in phonebook.items()}
+# print(phonebook_copy)
+# print(phonebook_copy2)
 
-    while choice != QUIT:
-        # получить выбранный пользователем пункт меню
-        choice = get_menu_choice()
+population = {'New York': 8398748, 'Los Angeles': 3990456,
+              'Chicago': 2705994, 'Houston': 2325502,
+              'Phoenix': 1660272, 'Philadelphia': 1584138}
+print(population)
 
-        # обработать выбранный вариант действий.
-        if choice == LOOK_UP:
-            look_up(birthdays)
-        elif choice == ADD:
-            add(birthdays)
-        elif choice == CHANGE:
-            change(birthdays)
-        elif choice == DELETE:
-            delete(birthdays)
+largest = {}
+for k, v in population.items():
+    if v > 2000000:
+        largest[k] = v
+print(f'1{largest}')
 
-def get_menu_choice():
-    print()
-    print('Друзья и их дни рождения')
-    print('------------------------')
-    print('1. Найти день рождения')
-    print('2. Добавить новый день рождения')
-    print('3. Изменить день рождения')
-    print('4. Удалить день рождения')
-    print('5. Выйти из программы')
-    print()
-
-    # Получить выбранный пользователем пункт
-    choice = int(input('Введите выбранный пункт: '))
-
-    # Проверить выбранный пункт на допустимость
-    while choice < LOOK_UP or choice > QUIT:
-        choice = int(input('Введите выбранный пункт: '))
-
-    # вернуть выбранный пользователем пункт
-    return choice
-
-
-def look_up(birthdays):
-    # получить искомое имя
-    name = input('Введите имя: ')
-    # отыскать его в словаре
-    print(birthdays.get(name, 'Не найдено.'))
-
-
-def add(birthdays):
-    # Получить имя и день рождения
-    name = input('Введите имя: ')
-    bday = input('Введите день рождения: ')
-
-    # Если имя не существует, то его добавить
-    if name not in birthdays:
-        birthdays[name] = bday
-    else:
-        print('Эта запись уже существует.')
-
-
-def change(birthdays):
-    # Получить искомое имя
-    name = input('Введите имя: ')
-
-    if name in birthdays:
-        # Получить новый день рождения
-        bday = input('Введите день рождения: ')
-        # обновить запись
-        birthdays[name] = bday
-    else:
-        print('Это имя не найдено.')
-
-
-def delete(birthdays):
-    name = input('Введите имя: ')
-    if name in birthdays:
-        del birthdays[name]
-    else:
-        print('Это имя не найдено.')
-
-
-if __name__ == '__main__':
-    main()
+largest2 = {k: v for k, v in population.items() if v > 2000000}
+print(f'2{largest2}')
