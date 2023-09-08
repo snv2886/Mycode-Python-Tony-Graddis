@@ -134,16 +134,39 @@
 # print(phonebook_copy)
 # print(phonebook_copy2)
 
-population = {'New York': 8398748, 'Los Angeles': 3990456,
-              'Chicago': 2705994, 'Houston': 2325502,
-              'Phoenix': 1660272, 'Philadelphia': 1584138}
-print(population)
+# population = {'New York': 8398748, 'Los Angeles': 3990456,
+#               'Chicago': 2705994, 'Houston': 2325502,
+#               'Phoenix': 1660272, 'Philadelphia': 1584138}
+# print(population)
+# 
+# largest = {}
+# for k, v in population.items():
+#     if v > 2000000:
+#         largest[k] = v
+# print(f'1{largest}')
+# 
+# largest2 = {k: v for k, v in population.items() if v > 2000000}
+# print(f'2{largest2}')
 
-largest = {}
-for k, v in population.items():
-    if v > 2000000:
-        largest[k] = v
-print(f'1{largest}')
+# names = ['Kris', 'Katy', 'Jhoanna', 'Kurt']
+# names_d = {}
+# for k in names:
+#     names_d[k] = len(k)
+# print(names_d)
 
-largest2 = {k: v for k, v in population.items() if v > 2000000}
-print(f'2{largest2}')
+
+# phonebook = {'Kris': '919-555-111',
+#              'Katy': '828-555-222',
+#              'Jhoanna': '704-555-333',
+#              'Kurt': '919-555-3333'}
+# phonebook_copy = {k: v for k, v in phonebook.items() if v[0:3] == '919'}
+# print(phonebook_copy)
+
+# myset_c = set('aabcc')
+# print(myset_c)
+
+set1 = set([1, 3, 4])
+set2 = set('abc')
+set1.update(set2)
+print(set1)
+print(set2)
